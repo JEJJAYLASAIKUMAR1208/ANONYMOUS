@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style-2.css">
+  <title>Login Page</title>
+  <style>
+    /* Add this CSS to remove space between checkbox and text */
+    input[type="checkbox"] {
+      margin-right: 5px;
+      margin-left: 100px;
+      width: auto;
+      justify-content: center;
+      display:inline;
+      align-items: center;
+    }
+    .checkbox-label input[type="checkbox"] {
+      margin-right: 5px;
+    }
+    .checkbox-label {
+      display: flex;
+      align-items: center;
+    }
+  </style>
+  <script>
+    function togglePasswordVisibility() {
+      var passwordInput = document.getElementById("password");
+      var passwordCheckbox = document.getElementById("password-checkbox");
+
+      if (passwordCheckbox.checked) {
+        passwordInput.type = "text";
+      } else {
+        passwordInput.type = "password";
+      }
+    }
+  </script>
+</head>
+<body>
+  <div class="container">
+    <font color="white"><h1>Login</h1></font>
+    
+    <form>
+      <input type="text" placeholder="Username" required><br>
+      <input type="password" id="password" placeholder="Password" required><br>
+      <!-- Remove the space after the checkbox -->
+      <input type="checkbox" value="SHOWPASSWORD" id="password-checkbox" onclick="togglePasswordVisibility()">Show Password
+      <br>
+      <input type="submit" value="Login"><br>
+    </form>
+    <p>Don't have an account? <a href="file:///C:/Users/jejja/Downloads/course/SIGNUP.HTML" target="_blank">Sign Up</a></p>
+  </div>
+</body>
+</html>

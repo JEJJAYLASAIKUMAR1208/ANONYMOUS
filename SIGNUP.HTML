@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style-2.css">
+  <title>Signup Page</title>
+  <style>
+    .container {
+      max-width: 400px;
+      margin: 0 auto;
+      padding-top: 50px;
+    }
+  </style>
+  <script>
+    
+    function validateEmailOrMobile() {
+      var emailOrMobileInput = document.getElementById("email-mobile");
+      var emailOrMobileValue = emailOrMobileInput.value;
+      var emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+      var mobilePattern = /^\d{10}$/;
+
+      if (!emailPattern.test(emailOrMobileValue) && !mobilePattern.test(emailOrMobileValue)) {
+        alert("Please enter a valid email address or mobile number.");
+        return false;
+      }
+
+      return true;
+    }
+  </script>
+  
+
+</head>
+<body>
+  <div class="container">
+    <h1>Sign Up</h1>
+    
+    <form onsubmit="return validateEmailOrMobile()">
+      <input type="text" id="email-mobile" placeholder="Email or Mobile" required><br>
+      <input type="password" placeholder="Password" required><br>
+      <input type="password" placeholder="Confirm Password" required><br>
+      <input type="submit" value="Sign Up"><br>
+    </form>
+    <p>Already have an account? <a href="file:///C:/Users/jejja/Downloads/course/login%20and%20signup.html" target="_blank">Login</a></p>
+  </div>
+  
+
+</body>
+</html>
